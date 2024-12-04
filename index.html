@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #000000, #434343);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #ffffff;
+    }
+
+    .card {
+      width: 80%;
+      max-width: 600px;
+      border: 2px solid #555;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+    }
+
+    .content {
+      padding: 20px;
+      overflow-y: auto;
+      max-height: 600px; /* Adjust height for the scrollable area */
+    }
+
+    .content h1 {
+      font-size: 2.5em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      color: #d3d3d3;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .poem {
+      font-size: 1.1em;
+      font-style: italic;
+      color: #ffc0cb; /* Light pink */
+      margin-top: 10px;
+    }
+
+    .sparkles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .sparkles div {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      animation: sparkle 2s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes sparkle {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateY(-20px) scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkles" id="sparkles"></div>
+  <div class="card">
+    <div class="content">
+      <h1>Happy Birthday, My Love!</h1>
+      <p>
+        My dearest Trishelle, today is more than a celebration of your birth it’s a reminder of how truly incredible you are.
+        You are my everything, my perfect human, my all. And I have no idea how to show you that.
+        You’re not just my partner but my greatest supporter, my rock, and the light that guides me through every storm.
+        With you by my side, I feel invincible.
+      </p>
+      <div class="poem">
+        Your touch is calm, your voice is sweet, <br>
+        In your love, my world’s complete. <br>
+        The gentlest soul, the truest heart, <br>
+        From you, I never want to part.
+      </div>
+      <p>
+        You are my everything, the one who lifts me when I fall, encourages me when I doubt myself, and celebrates every little success as if it were your own.
+        Your kindness and care are unmatched, and your love is the purest gift I’ve ever received. 
+        I thank you for always believing in me and for being my safe haven.
+        Thank you for you, thank you for who you are and for all you do. Thank you for the amazing person and amazing soul you have.
+        You are truly everything amazing and so much more.
+      </p>
+      <div class="poem">
+        A love so strong, a bond so rare, <br>
+        You show me daily how much you care. <br>
+        My soulmate, my best friend, my queen, <br>
+        The most beautiful soul I’ve ever seen.
+      </div>
+      <p>
+        You’re not just the best wife in the world, you’re the best person I’ve ever known. Your compassion, strength, and warmth touch everyone around you. 
+        To me, you are perfect in every way, and I am endlessly grateful for the joy and light you bring into my life.
+      </p>
+      <div class="poem">
+        On your birthday, I hope you see, <br>
+        How much you mean to the world and me. <br>
+        With every breath, with every kiss, <br>
+        You’re my forever, my endless bliss.
+      </div>
+      <p>
+        On this day, I wish you everything you dream of happiness that knows no bounds, a love that only grows deeper, and the fulfillment of all your desires. 
+        You deserve it all, my love, because you give so much to everyone around you. Thank you for being the extraordinary person that you are.
+        I love you - 
+        Yesterday
+        Today
+        Forever
+        In Every Universe.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function createSparkles() {
+      const sparklesContainer = document.getElementById('sparkles');
+      for (let i = 0; i < 100; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.style.top = `${Math.random() * 100}%`;
+        sparkle.style.left = `${Math.random() * 100}%`;
+        sparkle.style.animationDelay = `${Math.random() * 2}s`;
+        sparklesContainer.appendChild(sparkle);
+      }
+    }
+
+    createSparkles();
+  </script>
+</body>
+</html>
